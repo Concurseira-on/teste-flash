@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regimento Interno – Câmara dos Deputados</title>
+
+<style>
+:root{
+  --texto:#0D134C;
+  --fundo:#EEF6F3;
+  --cards:#F7EDE7;
+  --tabela:#AFE8D0;
+  --importante:#E255BE;
+  --regra:#BF5130;
+  --atencao:#EFBD7B;
+  --naopode:#ff6b6b;
+}
+
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:var(--fundo);
+  color:var(--texto);
+}
+
+/* HEADER */
+header{
+  background:#ffffff;
+  padding:20px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  border-bottom:4px solid #dbe9e4;
+}
+
+.logo{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:#ff4d4d;
+  color:#fff;
+  font-weight:bold;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  gap:10px;
+  padding:15px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+nav button{
+  border:none;
+  padding:10px 18px;
+  border-radius:20px;
+  background:#ffffff;
+  color:var(--texto);
+  font-weight:bold;
+  cursor:pointer;
+}
+
+nav button.active{
+  background:var(--texto);
+  color:#fff;
+}
+
+/* SECTIONS */
+section{
+  display:none;
+  padding:20px;
+}
+
+section.active{
+  display:block;
+}
+
+/* CARDS */
+.card{
+  background:var(--cards);
+  padding:20px;
+  border-radius:16px;
+  margin-bottom:20px;
+}
+
+/* ALERTAS */
+.alert{
+  padding:15px;
+  border-radius:12px;
+  margin:15px 0;
+}
+
+.alert.atencao{
+  background:#fff3cd;
+  border-left:6px solid var(--atencao);
+}
+
+.alert.importante{
+  background:#fde6f5;
+  border-left:6px solid var(--importante);
+}
+
+.alert.naopode{
+  background:#ffe3e3;
+  border-left:6px solid var(--naopode);
+  color:#b00000;
+  font-weight:bold;
+}
+
+/* TABELA */
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:var(--tabela);
+  border-radius:12px;
+  overflow:hidden;
+}
+
+th,td{
+  padding:12px;
+}
+
+th{
+  background:#9edbc4;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">G</div>
+  <div>
+    <h1>Regimento Interno da Câmara</h1>
+    <p>Material de Revisão – Concurso Público</p>
+  </div>
+</header>
+
+<nav>
+  <button class="active" onclick="openTab('conceitos')">Conceitos Iniciais</button>
+  <button onclick="openTab('legislatura')">Legislatura e Sessões</button>
+  <button onclick="openTab('preparatorias')">Sessões Preparatórias</button>
+  <button onclick="openTab('mesa')">Mesa Diretora</button>
+  <button onclick="openTab('pegadinhas')">Pegadinhas</button>
+</nav>
+
+<!-- CONCEITOS -->
+<section id="conceitos" class="active">
+  <div class="card">
+    <h2>📌 Sede da Câmara dos Deputados</h2>
+    <p><strong>Sede:</strong> Capital Federal (Brasília).</p>
+    <p><strong>Funcionamento:</strong> Palácio do Congresso Nacional.</p>
+  </div>
+
+  <div class="alert atencao">
+    ⚠️ <strong>Atenção:</strong>  
+    A Câmara pode reunir-se em outro local do território nacional.
+  </div>
+
+  <div class="alert importante">
+    💡 <strong>Requisitos para mudança de local:</strong>
+    <ul>
+      <li>Motivo relevante ou força maior</li>
+      <li>Deliberação da Mesa</li>
+      <li>Aprovação da <strong>maioria absoluta</strong></li>
+    </ul>
+  </div>
+</section>
+
+<!-- LEGISLATURA -->
+<section id="legislatura">
+  <div class="card">
+    <h2>📆 Conceitos Fundamentais</h2>
+
+    <table>
+      <tr>
+        <th>Instituto</th>
+        <th>Duração</th>
+      </tr>
+      <tr>
+        <td>Legislatura</td>
+        <td>4 anos</td>
+      </tr>
+      <tr>
+        <td>Sessão Legislativa</td>
+        <td>1 ano</td>
+      </tr>
+      <tr>
+        <td>Período Legislativo</td>
+        <td>6 meses</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="alert naopode">
+    ❌ NÃO CONFUNDA:  
+    Legislatura ≠ Sessão Legislativa
+  </div>
+</section>
+
+<!-- PREPARATÓRIAS -->
+<section id="preparatorias">
+  <div class="card">
+    <h2>🏛️ Sessões Preparatórias</h2>
+    <ul>
+      <li>Ocorrem antes da 1ª e da 3ª sessões legislativas</li>
+      <li>Finalidades:
+        <ul>
+          <li>Posse dos Deputados</li>
+          <li>Eleição da Mesa Diretora</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="alert naopode">
+    🚫 NÃO OCORREM TODOS OS ANOS.
+  </div>
+</section>
+
+<!-- MESA -->
+<section id="mesa">
+  <div class="card">
+    <h2>🪑 Mesa Diretora</h2>
+    <p>Órgão responsável pela direção dos trabalhos legislativos e administrativos.</p>
+
+    <table>
+      <tr>
+        <th>Composição</th>
+        <th>Quantidade</th>
+      </tr>
+      <tr>
+        <td>Presidente</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Vice-Presidentes</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Secretários</td>
+        <td>4</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="alert importante">
+    ⭐ Mandato de <strong>2 anos</strong>, vedada recondução na mesma legislatura.
+  </div>
+</section>
+
+<!-- PEGADINHAS -->
+<section id="pegadinhas">
+  <div class="alert naopode">
+    ❌ Sessão preparatória NÃO ocorre antes de toda sessão legislativa.
+  </div>
+
+  <div class="alert atencao">
+    ⚠️ Maioria absoluta ≠ maioria simples.
+  </div>
+
+  <div class="alert importante">
+    💡 Prova adora confundir:
+    <br>➡️ sede × local de funcionamento
+  </div>
+</section>
+
+<script>
+function openTab(id){
+  document.querySelectorAll("section").forEach(sec=>sec.classList.remove("active"));
+  document.querySelectorAll("nav button").forEach(btn=>btn.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  event.target.classList.add("active");
+}
+</script>
+
+</body>
+</html>
